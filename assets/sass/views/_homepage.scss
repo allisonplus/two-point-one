@@ -1,0 +1,59 @@
+//--------------------------------------------------------------
+// Homepage Template
+//--------------------------------------------------------------
+.home {
+
+	// Those descriptive adjectives.
+	h2 {
+		margin: 0 0 rem(5);
+	} // h2
+
+	// Hey, you made it.
+	h4 {
+		margin: 0;
+	} // h4
+
+	// Picture of code.
+	img {
+		float: none;
+		// margin: rem(15) 0 0 rem(20);
+
+		@include media($tablet-landscape) {
+			float: right;
+		}
+	} // img
+
+	// Entry-content just on the home page.
+	.entry-content {
+		margin-top: 0;
+	} // .entry-content
+
+	// Article just on the home page.
+	article {
+		margin-bottom: 0;
+	} // .article
+} // .home
+
+// Basic Button Styling
+.button {
+	background: $color-gold;
+	color: $color-white;
+	display: block;
+	letter-spacing: rem(2);
+	margin: rem(25) auto;
+	padding: rem(8) rem(12);
+	text-align: center;
+	text-transform: capitalize;
+	transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+
+	// Hover state.
+	&:hover {
+		background: darken($color-gold, 20%);
+		color: $color-white;
+	}
+
+	// Visted link.
+	&:visited {
+		color: $color-white;
+	} // &::visited
+}

@@ -1,0 +1,64 @@
+//--------------------------------------------------------------
+// Header
+//--------------------------------------------------------------
+
+// Site Header.
+.site-header {
+	background-color: $color-white;
+	margin: 0 auto;
+	max-width: rem(1600);
+	padding: 0 2 * $gutter;
+	position: relative;
+	z-index: 9;
+} // .site-header
+
+// Site Title
+.site-title {
+	float: left;
+	font-family: $font-flair;
+	font-size: rem(44);
+	font-weight: 700;
+	margin: 0;
+} // .site-title
+
+// Site Description
+.site-description {
+	font-size: rem(24);
+	margin: 0 0 rem(24) 0;
+} // .site-description
+
+// Nav.
+nav {
+	background-color: transparent;
+	display: flex;
+	position: relative;
+	width: 100%;
+	z-index: 10;
+} // nav
+
+// Menu.
+.menu {
+	display: flex;
+	flex-direction: row;
+	font-family: $font-sans;
+	justify-content: space-around;
+	margin: 0;
+	padding: rem(10);
+	width: 100%;
+
+	li {
+		list-style-type: none;
+
+		a {
+			color: $color-black;
+			display: block;
+			padding: rem(10) rem(35);
+			text-align: center;
+			transition: color 0.2s ease-in-out;
+
+			&:hover {
+				color: darken($color-gold, 15%);
+			} // &:hover
+		} // a
+	} // li
+} // .menu

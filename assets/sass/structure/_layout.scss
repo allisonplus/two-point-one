@@ -1,0 +1,92 @@
+//--------------------------------------------------------------
+// Base Layout
+//--------------------------------------------------------------
+.body {
+	min-height: 100vh;
+} // .body
+
+// Structure.
+.wrap {
+	@include outer-container;
+
+	padding: 0 2 * $gutter;
+
+	@include media($desktop) {
+		padding: 0;
+	}
+} // .wrap
+
+// Content area.
+.site-main {
+	background-color: rgba($color-white, 0.9);
+	border-radius: rem(12);
+	margin: rem(30) 0;
+	overflow: hidden;
+	padding: rem(10);
+	position: relative;
+	z-index: 9;
+
+	@include media($tablet-landscape) {
+		margin: rem(75) 0;
+		padding: rem(10) rem(16) rem(30);
+	}
+
+	@include media($desktop) {
+		padding: rem(10) rem(35) rem(30);
+	}
+
+	// Different padding on the blog, though.
+	.blog & {
+		padding: rem(14) rem(12) rem(30);
+
+		@include media($tablet-portrait) {
+			padding: rem(30);
+		}
+
+		@include media($tablet-landscape) {
+			padding: rem(20) rem(16) rem(30);
+		}
+
+		@include media($desktop) {
+			padding: rem(20) rem(35) rem(30);
+		}
+	} // & blog
+} // .site-main
+
+.site-footer {
+
+	@include media($tablet-landscape) {
+		padding: rem(10) 2 * $gutter;
+	}
+} // .site-header, .site-footer
+
+// Purple graffiti background photo.
+.site-content {
+	align-items: center;
+	background-image: linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("assets/images/home-background.jpg");
+	background-size: cover;
+	margin: rem(20) auto 0;
+	min-height: calc(100vh - 78px);
+	z-index: 1;
+
+	// No margin on home page site content.
+	.home & {
+		margin: 0;
+	} // .home &
+} // .site-content
+
+.primary {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(12);
+	}
+} // .primary
+
+.secondary {
+	@include fill-parent;
+
+	@include media($tablet-landscape) {
+		@include span-columns(4);
+	}
+} // .secondary

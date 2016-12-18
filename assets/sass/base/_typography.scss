@@ -1,0 +1,187 @@
+//--------------------------------------------------------------
+// Typography
+//--------------------------------------------------------------
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color-text-main;
+	font-family: $font-sans;
+	line-height: $line-height-body;
+} // body, button, input, select, textarea
+
+//--------------------------------------------------------------
+// Headers
+//--------------------------------------------------------------
+
+h1,
+.h1 {
+	font-size: rem(48);
+} // h1, .h1
+
+h2,
+.h2 {
+	font-size: rem(32);
+} // h2, .h2
+
+h3,
+.h3 {
+	font-size: rem(26);
+} // h3, .h3
+
+h4,
+.h4 {
+	font-size: rem(22);
+} // h4, .h4
+
+
+h5,
+.h5 {
+	font-size: rem(18);
+}  // h5, .h5
+
+h6,
+.h6 {
+	font-size: rem(16);
+
+} // h6, .h6
+
+//--------------------------------------------------------------
+// Copy
+//--------------------------------------------------------------
+
+p {
+	font-size: rem(22);
+	margin: 0 0 rem(24) 0;
+} // p
+
+a {
+	text-decoration: none;
+} // a
+
+b,
+strong {
+	font-weight: 700;
+} // b, strong
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+} // dfn, cite, em, i
+
+
+q {
+	margin: 0 rem(24);
+	quotes: "" "";
+
+	&::before,
+	&::after {
+		content: "";
+	}  // &::before, &::after
+} // blockquote, q
+
+// Blog blockquote.
+blockquote {
+	border-left: rem(2) solid $color-gold;
+	font-size: rem(18);
+	font-style: italic;
+	margin: 0;
+	padding: rem(10) rem(18);
+
+	h4 {
+		color: $color-gold;
+		font-size: rem(16);
+		font-style: initial;
+		font-weight: 300;
+		margin-bottom: 0;
+		padding-left: rem(25);
+		text-align: left;
+
+		&::before {
+			background: $color-gold;
+			clear: both;
+			content: "";
+			display: block;
+			height: rem(2);
+			margin: 0 auto rem(-13) rem(-25);
+			width: rem(20);
+		} // &::before
+	} // h4
+
+	p {
+		font-size: rem(16);
+		margin-top: 0;
+	} // p
+} // blockquote
+
+address {
+	margin: 0 0 rem(24) 0;
+} // address
+
+pre {
+	font-family: $font-pre;
+	font-size: rem(15);
+	line-height: $line-height-pre;
+	margin: 0 0 rem(24);
+	max-width: 100%;
+	overflow: auto;
+	padding: rem(24);
+} // pre
+
+code,
+kbd,
+tt,
+var {
+	font-family: $font-code;
+	font-size: rem(15);
+} // code, kbd, tt, var
+
+abbr,
+acronym {
+	border-bottom: 1px dotted $color-border-abbr;
+	cursor: help;
+} // abbr, acronym
+
+mark,
+ins {
+	text-decoration: none;
+} // mark, ins
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+} // sup, sub
+
+sup {
+	bottom: 1ex;
+} // sup
+
+sub {
+	top: 0.5ex;
+} // sub
+
+small {
+	font-size: 75%;
+} // small
+
+big {
+	font-size: 125%;
+} // big
+
+// Word Wrapping
+.entry-title,
+.entry-content,
+.comments-title,
+.comment-content,
+.widget-title,
+.widget {
+	@include word-break;
+} // .entry-title, .entry-content, .comments-title, .comment-content, .widget-title, .widget

@@ -1,0 +1,153 @@
+//--------------------------------------------------------------
+// Projects Archives
+//--------------------------------------------------------------
+.post-type-archive {
+
+	.page-title {
+		font-family: $font-serif;
+		font-size: rem(30);
+		text-align: center;
+	} // .page-title
+
+	// Get rid of entry content default pseudo-element b/c flex.
+	.entry-content {
+		background-color: $color-whitesmoke;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 0;
+		padding: rem(12);
+		position: relative;
+
+		@include media($tablet-landscape) {
+			padding: rem(18);
+			width: 50%;
+		}
+
+		@include media($desktop) {
+			padding: rem(45);
+		}
+
+		// // Triangle fun!
+		&::before {
+			@include position(absolute, 25% 100% null null);
+
+			border: solid transparent;
+			border-right-color: $color-whitesmoke;
+			border-width: rem(15);
+			content: " ";
+			height: 0;
+			margin-top: rem(-15);
+			pointer-events: none;
+			width: 0;
+		} // &::before
+
+		&::after {
+			content: none;
+		} // &::after
+
+		p {
+			font-size: rem(16);
+		} // p
+	} // .entry-content
+
+	// Each portfolio item listed.
+	.portfolio {
+		border: rem(1) solid $color-gold;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		@include media($tablet-landscape) {
+			flex-direction: row;
+		}
+
+		// Featured image.
+		.portfolio-image {
+			@include size(auto rem(215));
+
+			@include media($tablet-landscape) {
+				height: auto;
+				width: 50%;
+			}
+		} // .portfolio-image
+
+		// Swap the order of those ones, please.
+		&:nth-child(odd) {
+
+			@include media($tablet-landscape) {
+				flex-direction: row-reverse;
+			}
+
+			// Reverse triangle fun!
+			.entry-content::before {
+				@include position(absolute, 25% -5% null null);
+				@include size(0 0);
+
+				border: solid transparent;
+				border-left-color: $color-whitesmoke;
+				border-width: rem(15);
+				content: "";
+				margin-top: rem(-15);
+				pointer-events: none;
+			} // &::before
+		} // &:nth-child(odd)
+
+		// Portfolio title.
+		.item-name {
+			font-family: $font-serif;
+			margin-top: 0;
+			text-align: center;
+
+			// Title link.
+			a {
+				color: $color-black;
+			} // a
+
+			// Gold line afterwards.
+			&::after {
+				border-bottom: rem(2) solid $color-gold;
+				content: "";
+				display: block;
+				margin: 0 auto;
+				padding-bottom: rem(15);
+				width: rem(75);
+			} // &::after
+		} // .item-name
+	} // .portfolio
+} // .post-type-archive
+
+
+//--------------------------------------------------------------
+// Single Portfolio
+//--------------------------------------------------------------
+.single-portfolio {
+
+	// Featured Image.
+	.single-portfolio-image {
+		display: block;
+		margin: 0 auto;
+	} // .single-portfolio-image
+
+	// Entry header.
+	.entry-header {
+		margin-top: rem(15);
+	} // .entry-header
+
+	// See project link.
+	.project-link {
+		max-width: rem(190);
+	} // .project-link
+
+	// Image gallery
+	.image-gallery {
+		@include list-reset;
+
+		// Each image.
+		li {
+			display: inline-block;
+			margin-right: rem(18);
+			text-align: center;
+		} // li
+	} // .image-gallery
+} // .single-portfolio

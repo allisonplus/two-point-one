@@ -1,0 +1,210 @@
+//--------------------------------------------------------------
+// Comments
+//--------------------------------------------------------------
+
+// Comment title
+.comments-title {
+	font-size: rem(24);
+} // .comments-title
+
+// Comment list
+.comment-list {
+	list-style: none;
+	margin: 0;
+} // .comment-list
+
+// Comment meta
+.comment-meta {
+	margin: 0 0 rem(4) 0;
+} // .comment-meta
+
+// Comments avatar
+.avatar {
+	float: left;
+	margin: 0 rem(10) 0 0;
+} // .avatar
+
+// By post author
+.bypostauthor {
+	display: block;
+} // .bypostauthor
+
+// Comment Form
+.comment-form {
+	margin: 0 auto;
+	max-width: rem(570);
+
+	input:not(.submit) {
+		width: 100%;
+
+		@include media($phone-landscape) {
+			max-width: rem(250);
+		}
+	} // input:not(.submit)
+} // .comment-form
+
+#reply-title {
+	letter-spacing: rem(1.3);
+	text-align: center;
+
+	&::after {
+		background: $color-gold;
+		content: "";
+		display: block;
+		height: rem(2);
+		margin: rem(10) auto rem(30);
+		width: rem(35);
+	} // &::after
+} // #reply-title
+
+// Default labels for comment form
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	label {
+		@include span-columns(12);
+
+		@include media($phone-landscape) {
+			width: rem(75);
+		}
+	} // label
+} // .comment-form-author, .comment-form-email, .comment-form-url
+
+// Nested comments spacing from mobile to desktop
+.comment-list .children {
+	margin-left: 0;
+	padding-left: rem(20);
+
+	@include media($phone-landscape) {
+		padding-left: rem(35);
+	}
+
+	@include media($tablet-portrait) {
+		padding-left: rem(60);
+	}
+} // .comment-list .children
+
+// Comment area.
+.comments-area {
+	background-color: $color-whitesmoke;
+	border-top: rem(1) solid $color-silver-chalice;
+	margin-top: 4.5%;
+	padding: rem(20) 0;
+} // .comments-area
+
+// List of comments.
+.comment-list {
+	padding: 0;
+} // .comment-list
+
+// Comment inside comment
+.comment-content {
+	margin-left: rem(110);
+
+	p {
+		font-size: rem(16);
+		margin-bottom: 0;
+	} // p
+} // .comment-content
+
+.comment-metadata {
+
+	a {
+		color: $color-gold;
+		text-decoration: none;
+	} // a
+} // .comment-metadata
+
+.says {
+	display: none;
+} // .says
+
+.comment-edit-link {
+	color: $color-gray;
+	margin-left: rem(15);
+}
+
+// Comment submit button.
+#submit.submit {
+	background-color: $color-gold;
+	padding: 1.5%;
+
+	// Button hover.
+	&:hover {
+		background-color: darken($color-gold, 25%);
+		transition: background-color 0.25s;
+	} // &:hover
+} // #submit.submit
+
+#cancel-comment-reply-link {
+	font-size: rem(12);
+	font-weight: 400;
+	line-height: rem(18);
+}
+
+#respond {
+
+	.required {
+		color: $color-youtube;
+		font-weight: 700;
+	}
+
+	label {
+		color: $color-black;
+		font-size: rem(12);
+		font-style: italic;
+	}
+
+	input {
+		margin: 0 0 rem(9);
+		width: 100%;
+	}
+
+	textarea {
+		width: 100%;
+	}
+
+	dt {
+		color: $color-gray;
+		font-size: rem(12);
+		line-height: rem(18);
+	}
+
+	dd {
+		color: $color-gray;
+		font-size: rem(12);
+		line-height: rem(18);
+
+		code {
+			font-size: rem(11);
+		}
+	}
+
+	.form-submit {
+		margin: 0 0 rem(24);
+
+		input {
+			font-size: rem(14);
+			width: 100%;
+		}
+	}
+}
+
+.comment-meta a {
+
+	&:active,
+	&:hover {
+		color: $color-purple;
+	} // 	&:active, &:hover
+} // .comment-meta a
+
+// Reply link.
+.reply {
+	font-style: italic;
+	margin: rem(12) 0 rem(12) rem(115);
+} // .reply
+
+.reply a:hover,
+.comment-edit-link:hover {
+	color: $color-purple;
+}
