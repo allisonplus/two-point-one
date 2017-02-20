@@ -20,7 +20,7 @@
 .site-main {
 	background-color: rgba($color-white, 0.9);
 	border-radius: rem(12);
-	margin: rem(30) 0;
+	margin: 0;
 	overflow: hidden;
 	padding: rem(10);
 	position: relative;
@@ -67,6 +67,7 @@
 	background-size: cover;
 	margin: rem(20) auto 0;
 	min-height: calc(100vh - 78px);
+	padding-top: rem(30);
 	z-index: 1;
 
 	// No margin on home page site content.
