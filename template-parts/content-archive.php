@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php.
+ * Template part for displaying archive posts (tags, etc.)
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -9,24 +9,19 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php $image = get_field('featured_img'); ?>
-	<div class="portfolio-image" style="background: url(<?php echo $image['sizes']['portfolio-archive']; ?>); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+<article <?php post_class( 'tag-group' ); ?>>
+	<div class="featured-container">
+		<img class ="featured" src="<?php echo esc_attr( atarr_get_post_image_uri( 'featured-blog' ) ); ?>" alt="<?php esc_html_e( 'Featured image for', 'atarr' ); ?>">
 
-	<div class="entry-content">
-		<header class="entry-header">
-			<h3 class="item-name"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-		</header><!-- .entry-header -->
-
-		<p><?php the_field('blurb'); ?></p>
-
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'atarr' ),
-				'after'  => '</div>',
-			) );
-		?>
-
-		<a class="button archive-btn" href="<?php the_permalink(); ?>"><?php esc_html_e( 'View Details', 'atarr' ); ?></a>
-	</div><!-- .entry-content -->
+		<div class="archive-content">
+			<header class="entry-header">
+				<?php
+				if ( is_single() ) :
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				else :
+					the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+				endif; ?>
+			</header><!-- .entry-header -->
+		</div><!--.archive-content-->
+	</div>
 </article><!-- #post-## -->
