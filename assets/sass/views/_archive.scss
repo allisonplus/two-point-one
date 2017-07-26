@@ -4,20 +4,21 @@
 .archive,
 .tag {
 
+	.page-title {
+		margin-top: 0;
+	} // .page-title
+
 	.archive-container {
 		align-items: center;
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
 		padding-bottom: $gutter * 2;
 
 		@include media($phone-landscape) {
 			align-items: flex-start;
 			flex-direction: row;
 		}
-	}
-
-	.page-title {
-		margin-top: 0;
 	}
 
 	.tag-group {
