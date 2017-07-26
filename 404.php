@@ -20,9 +20,9 @@ get_header(); ?>
 
 					<div class="page-content">
 
-						<p><?php esc_html_e( 'It seems we can’t find what you’re looking for. Perhaps searching can help.', 'atarr' ); ?></p>
+						<p><?php esc_html_e( 'It seems we can’t find what you’re looking for. Maybe something below will help you find your way?', 'atarr' ); ?></p>
 
-						<?php get_search_form(); ?>
+						<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
 
 					</div><!-- .page-content -->
 				</section><!-- .error-404 -->

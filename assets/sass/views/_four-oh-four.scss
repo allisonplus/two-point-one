@@ -1,0 +1,27 @@
+//--------------------------------------------------------------
+// 404 Page
+//--------------------------------------------------------------
+
+.error404 {
+	text-align: center;
+}
+
+.widget.widget_tag_cloud .widgettitle {
+	display: none;
+}
+
+.tagcloud {
+	margin: rem(20) auto;
+	max-width: rem(700);
+	text-align: center;
+
+	a {
+		margin: rem(10);
+		transition: all 0.3s ease-in-out;
+
+		&:hover {
+			color: $color-link-hover;
+			font-size: rem(28)!important;
+		}
+	} // a
+} // .tagcloud
