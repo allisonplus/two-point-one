@@ -1,0 +1,81 @@
+//--------------------------------------------------------------
+// Archives
+//--------------------------------------------------------------
+.archive,
+.tag {
+
+	.archive-container {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		padding-bottom: $gutter * 2;
+
+		@include media($phone-landscape) {
+			align-items: flex-start;
+			flex-direction: row;
+		}
+	}
+
+	.page-title {
+		margin-top: 0;
+	}
+
+	.tag-group {
+		display: flex;
+		flex-direction: column;
+		font-size: 0;
+		margin: 0;
+		max-width: rem(450);
+		width: 100%;
+
+		@include media($phone-landscape) {
+			width: calc(100% / 2);
+		}
+
+		@include media($tablet-landscape) {
+			flex-direction: row;
+			width: calc(100% / 3);
+		}
+
+		.featured-container {
+			position: relative;
+		} // .featured-container
+
+		// Wrapper around.
+		.archive-content {
+			@include position(absolute, 0 null 0 null);
+
+			display: block;
+			text-align: center;
+			width: 100%;
+
+			.entry-title {
+				font-size: rem(26);
+				line-height: 1.2;
+			} // .entry-title
+
+			.entry-header {
+				margin: 0 auto;
+				max-width: 90%;
+
+				// Transparent overlay (optional).
+				&::after {
+					@include position(absolute, 0 0 null null);
+					@include size(100% 100%);
+
+					background-image: linear-gradient(to bottom, $color-black 80%, transparent 100%);
+					content: "";
+					opacity: 0.4;
+					z-index: 2;
+				} // &::after
+			} // .entry-header
+
+			// Title links.
+			a {
+				color: $color-white;
+				position: relative;
+				z-index: 9;
+			} // a
+		} // archive-conent
+	} // article
+} // .archive
