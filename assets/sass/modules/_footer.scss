@@ -3,5 +3,10 @@
 //--------------------------------------------------------------
 .site-footer {
 	// background-image: linear-gradient(rgba(40, 40, 40, 0.7), rgba(40, 40, 40, 0.7)), url("assets/images/home-background.jpg");
+	margin: rem(20) 0 rem(50);
 	text-align: center;
+
+	@include media($tablet-landscape) {
+		margin: 0;
+	}
 } // .site-footer

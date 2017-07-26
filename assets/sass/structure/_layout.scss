@@ -9,7 +9,11 @@
 .wrap {
 	@include outer-container;
 
-	padding: 0 2 * $gutter;
+	padding: 0 2 * $gutter 2 * $gutter;
+
+	@include media($tablet-landscape) {
+		padding: 0 2 * $gutter;
+	}
 
 	@include media($desktop) {
 		padding: 0;
@@ -69,6 +73,10 @@
 	min-height: calc(100vh - 78px);
 	padding-top: rem(30);
 	z-index: 1;
+
+	@include media($desktop) {
+		min-height: calc(100vh - 178px);
+	}
 
 	// No margin on home page site content.
 	.home & {
