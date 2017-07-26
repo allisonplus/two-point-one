@@ -17,7 +17,7 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1><?php single_tag_title( 'Archives: ' ); ?></h1>
+					<h2 class="page-title"><?php single_tag_title( 'Archives: ' ); ?></h2>
 				</header><!-- .page-header -->
 
 				<div class="archive-container">
