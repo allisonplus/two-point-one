@@ -29,7 +29,7 @@
 	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'atarr' ); ?></a>
 
 	<header class="site-header">
-		<h1 class="site-title"><a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1 class="site-title"><a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html_e( 'Allison Tarr', 'atarr' ); ?></a></h1>
 
 		<nav id="site-navigation" class="main-navigation">
 			<?php
@@ -37,7 +37,7 @@
 					'container'      => 'false',
 					'theme_location' => 'primary',
 					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'menu dropdown'
+					'menu_class'     => 'menu dropdown',
 				) );
 			?>
 		</nav><!-- #site-navigation -->
