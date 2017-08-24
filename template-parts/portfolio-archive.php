@@ -10,15 +10,15 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php $image = get_field('featured_img'); ?>
-	<div class="portfolio-image" style="background: url(<?php echo $image['sizes']['portfolio-archive']; ?>); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+	<?php $image = get_field( 'featured_img' ); ?>
+	<div class="portfolio-image" style="background: url(<?php echo esc_url( $image['sizes']['portfolio-archive'] ); ?>); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
 
 	<div class="entry-content">
 		<header class="entry-header">
 			<h3 class="item-name"><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 		</header><!-- .entry-header -->
 
-		<p><?php the_field('blurb'); ?></p>
+		<p><?php the_field( 'blurb' ); ?></p>
 
 		<?php
 			wp_link_pages( array(

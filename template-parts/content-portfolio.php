@@ -25,23 +25,23 @@
 
 			<?php
 			// Get gallery of images.
-			$images = get_field('images');
+			$images = get_field( 'images' );
 
-			if( $images ): ?>
+			if ( $images ) : ?>
 				<ul class="image-gallery">
-					<?php foreach( $images as $image ): ?>
+					<?php foreach ( $images as $image ) : ?>
 					<li>
-						<a href="<?php echo $image['url']; ?>">
-							<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<a href="<?php echo esc_url( $image['url'] ); ?>">
+							<img src="<?php echo esc_url( $image['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_html( $image['alt'] ); ?>" />
 						</a>
-						<p><?php echo $image['caption']; ?></p>
+						<p><?php echo esc_html( $image['caption'] ); ?></p>
 					</li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>
 
-			<?php if( get_field( 'url' ) ): ?>
-				<a class="button project-link" href="<?php the_field( 'url' ); ?>"><?php esc_html_e( 'Project Link', 'atarr' ); ?></a>
+			<?php if ( get_field( 'url' ) ) : ?>
+				<a class="button project-link" href="<?php esc_url( the_field( 'url' ) ); ?>"><?php esc_html_e( 'Project Link', 'atarr' ); ?></a>
 			<?php endif; ?>
 
 		</div><!-- .entry-content -->

@@ -28,11 +28,11 @@ get_header(); ?>
 					endwhile; // End of the loop.
 					?>
 
-					<?php if ( has_sub_field( 'factoids' ) ): ?>
+					<?php if ( has_sub_field( 'factoids' ) ) : ?>
 
 						<div class="about-things">
 							<h2><?php esc_html_e( 'Things to Know', 'atarr' ); ?></h2>
-							<?php while( has_sub_field( 'factoids' ) ): ?>
+							<?php while ( has_sub_field( 'factoids' ) ) : ?>
 							<div class="factoid">
 								<?php the_sub_field( 'icon' ); ?>
 
