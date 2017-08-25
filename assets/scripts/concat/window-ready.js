@@ -3,7 +3,7 @@
  *
  * Add a "ready" class to <body> when window is ready.
  */
-window.wdsWindowReady = {};
+window.WindowReady = {};
 ( function ( window, $, app ) {
 	// Constructor.
 	app.init = function () {
@@ -31,4 +31,4 @@ window.wdsWindowReady = {};
 
 	// Engage!
 	$( app.init );
-} )( window, jQuery, window.wdsWindowReady );
+} )( window, jQuery, window.WindowReady );

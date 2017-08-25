@@ -3,7 +3,7 @@
  *
  * Deal with the search form.
  */
-window.wdsSearch = {};
+window.search = {};
 
 ( function ( window, $, app ) {
 	// Constructor.
@@ -52,4 +52,4 @@ window.wdsSearch = {};
 
 	// Engage!
 	$( app.init );
-} )( window, jQuery, window.wdsSearch );
+} )( window, jQuery, window.search );

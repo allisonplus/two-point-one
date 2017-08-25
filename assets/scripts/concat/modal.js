@@ -3,7 +3,7 @@
  *
  * Deal with multiple modals and their media.
  */
-window.wdsModal = {};
+window.modal = {};
 
 ( function ( window, $, app ) {
 	// Constructor.
@@ -92,4 +92,4 @@ window.wdsModal = {};
 
 	// Engage!
 	$( app.init );
-} )( window, jQuery, window.wdsModal );
+} )( window, jQuery, window.modal );
