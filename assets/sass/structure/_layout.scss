@@ -22,13 +22,11 @@
 
 // Content area.
 .site-main {
-	background-color: rgba($color-white, 0.9);
-	border-radius: rem(12);
+	background-color: $color-white;
 	margin: 0;
 	overflow: hidden;
 	padding: rem(10);
 	position: relative;
-	z-index: 9;
 
 	@include media($tablet-landscape) {
 		margin: rem(75) 0;
@@ -74,8 +72,16 @@
 	padding-top: rem(30);
 	z-index: 1;
 
+	@include media($tablet-portrait) {
+		min-height: calc(100vh - 170px);
+	}
+
+	@include media($tablet-landscape) {
+		padding-top: 0;
+	}
+
 	@include media($desktop) {
-		min-height: calc(100vh - 178px);
+		min-height: calc(100vh - 162px);
 	}
 
 	// No margin on home page site content.
