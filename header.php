@@ -31,16 +31,25 @@
 	<header class="site-header">
 		<h1 class="site-title"><a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php esc_html_e( 'Allison Tarr', 'atarr' ); ?></a></h1>
 
-		<nav id="site-navigation" class="main-navigation">
-			<?php
-				wp_nav_menu( array(
-					'container'      => 'false',
-					'theme_location' => 'primary',
-					'menu_id'        => 'primary-menu',
-					'menu_class'     => 'menu dropdown',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+		<button class="sliding-panel-button mobile-menu-toggle" type="button">
+			<span class="mobile-menu-bar line-1"></span>
+			<span class="mobile-menu-bar line-2"></span>
+			<span class="mobile-menu-bar line-3"></span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Menu', 'rcs' ); ?></span>
+		</button>
+
+		<div class="navigation-wrapper sliding-panel-content header-mobile">
+
+			<nav id="site-navigation" class="main-navigation">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'menu_class'     => 'menu menu-horizontal main-menu',
+					) );
+				?>
+			</nav><!-- #site-navigation -->
+		</div>
 
 	</header><!-- #masthead -->
 
