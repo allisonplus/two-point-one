@@ -25,15 +25,16 @@ a {
 .menu {
 	align-items: flex-start;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: space-between;
 	list-style-type: none;
 	margin-left: auto;
 	max-width: rem(800);
 	padding: 1% 0;
 
-	@include media($tablet-portrait) {
-		max-width: initial;
+	@include media($tablet-landscape) {
+		flex-direction: row;
+		justify-content: flex-end;
 	}
 
 	li {
@@ -138,15 +139,11 @@ a {
 
 // Main navigation (after creating a menu in the dashboard)
 .main-navigation {
-	display: none;
-	float: right;
-	position: relative;
 	text-transform: uppercase;
-	width: auto;
+	// width: 100%;
 
 	// Menu area
 	ul {
-		display: none;
 
 		@include media($phone-landscape) {
 			display: flex;
@@ -161,15 +158,6 @@ a {
 		display: block;
 	}
 } // .main-navigation
-
-// Small menu
-.menu-toggle {
-	display: block;
-
-	@include media($phone-landscape) {
-		display: none;
-	}
-} // .menu-toggle
 
 // Navigation on Comment, Post and Posts
 .comment-navigation,
