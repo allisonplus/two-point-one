@@ -19,27 +19,21 @@ function atarr_font_url() {
 	 * supported by the following, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$playfair = _x( 'on', 'Playfair Display font: on or off', 'atarr' );
-	$raleway = _x( 'on', 'Raleway font: on or off', 'atarr' );
-	$lifesavers = _x( 'on', 'Life Savers font: on or off', 'atarr' );
+	$alegreya = _x( 'on', 'Alegreya font: on or off', 'atarr' );
+	$lato = _x( 'on', 'Lato font: on or off', 'atarr' );
 
-	if ( 'off' !== $playfair || 'off' !== $raleway || 'off' != $fredericka ) {
+	if ( 'off' !== $alegreya || 'off' !== $lato ) {
 		$font_families = array();
 
-		if ( 'off' !== $playfair ) {
-			$font_families[] = 'Playfair Display:400,700,400italic';
+		if ( 'off' !== $alegreya ) {
+			$font_families[] = 'Alegreya';
 		}
 
-		if ( 'off' !== $raleway ) {
-			$font_families[] = 'Raleway:400,700';
+		if ( 'off' !== $lato ) {
+			$font_families[] = 'Lato:400,700';
 		}
 
-		if ( 'off' !== $lifesavers ) {
-			$font_families[] = 'Life Savers';
-		}
-
-		// <link href="https://fonts.googleapis.com/css?family=Life+Savers:700|Playfair+Display:400,700i|Raleway:400,700" rel="stylesheet">
-
+		// <link href="https://fonts.googleapis.com/css?family=Alegreya|Lato:400,700" rel="stylesheet">
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 		);
