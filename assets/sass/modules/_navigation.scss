@@ -18,6 +18,9 @@ a {
 
 	&.home-link {
 		color: $color-black;
+		display: inline-block;
+		font-weight: 400;
+		line-height: 1;
 	}
 } // a
 
